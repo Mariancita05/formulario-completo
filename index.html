@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="./img/icons8-formulario-16.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <section id="singUp" class="a">
+      <div class="container">
+        <div class="centered-section">
+          <h1>Registrate</h1>
+          <div id="registro">
+            <form action="" method="post" id="registro-form">
+              <!-- NOMBRE -->
+              <div id="form_nombre">
+                <label for="singup__nombre">Nombre<span>*</span></label>
+                <br />
+                <input
+                  type="text"
+                  name="singup__nombre"
+                  id="singup__nombre"
+                  required
+                />
+                <span id="error_nombre" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>1 a 40 Chars.
+                  No puede contener numeros</span
+                >
+              </div>
+              <!-- APELLIDO -->
+              <div id="form_apellido">
+                <label for="singup__apellido">Apellido<span>*</span></label>
+                <br />
+                <input
+                  type="text"
+                  name="singup__apellido"
+                  id="singup__apellido"
+                />
+
+                <span id="error_apellido" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>1 a 40 Chars.
+                  No puede contener numeros</span
+                >
+              </div>
+              <!-- DNI -->
+              <div id="form_dni">
+                <label for="singup__dni">DNI<span>*</span></label>
+                <br />
+                <input
+                  type="number"
+                  name="singup__dni"
+                  id="singup__dni"
+                  required
+                />
+                <span id="error_dni" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>1 Debes
+                  ingresar sólo números, sin puntos</span
+                >
+              </div>
+              <!-- FECHA DE NACIMIENTO -->
+              <div>
+                <label for="singup__nacimiento">Fecha nacimiento<span>*</span></label>
+                <br />
+                <input
+                  type="date"
+                  name="singup__nacimiento"
+                  id="singup__nacimiento"
+                  required
+                />
+              </div>
+              <!-- NACIONALIDAD -->
+              <div>
+                <label for="singup__nacionalidad">Nacionalidad<span>*</span></label>
+                <br />
+                <select
+                  name="singup__nacionalidad"
+                  id="singup__nacionalidad"
+                  required
+                ></select>
+                <script>
+                  let nacionalidad = [
+                    "AR",
+                    "CL",
+                    "UR",
+                    "BR",
+                    "ECU",
+                    "COL",
+                    "otro",
+                  ];
+                  let selectElement = document.getElementById(
+                    "singup__nacionalidad"
+                  );
+
+                  for (let i = 0; i < nacionalidad.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = nacionalidad[i];
+                    option.textContent = nacionalidad[i];
+                    selectElement.appendChild(option);
+                  }
+                </script>
+              </div>
+              <!-- EMAIL -->
+              <label for="singup__email">Email<span>*</span></label>
+              <br />
+              <input
+                type="email"
+                name="singup__email"
+                id="singup__email"
+                required
+              />
+              <span id="error_email" class="error__inactive"
+                ><i class="bi bi-exclamation-triangle-fill"></i>Ingresa un
+                correo válido
+              </span>
+              <!-- USUARIO -->
+              <div>
+                <label for="singup__usuario">Usuario<span>*</span></label>
+                <br />
+                <input
+                  type="text"
+                  name="singup__usuario"
+                  id="singup__usuario"
+                  required
+                />
+                <span id="error_usuario" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>4 a 16
+                  digitos, sin chars especiales ej: acentos /, $ , #</span
+                >
+              </div>
+              <!-- CONTRASEÑA -->
+              <div>
+                <label for="singup__password">Contraseña<span>*</span></label>
+                <br />
+                <input
+                  type="password"
+                  name="singup__password"
+                  id="singup__password"
+                />
+                <span id="error_password" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>8 a 12 digitos
+                  (Obligatorio)</span
+                >
+              </div>
+
+              <br />
+              <!-- CONFIRMAR CONTRASEÑA -->
+              <div>
+                <label for="singup__password2">Repetir Contraseña<span>*</span></label>
+                <input
+                  type="password"
+                  name="singup__password2"
+                  id="singup__password2"
+                />
+                <span id="error_password2" class="error__inactive"
+                  ><i class="bi bi-exclamation-triangle-fill"></i>Las
+                  contraseñas no coinciden</span
+                >
+              </div>
+
+              <button id="enviar" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="inicio-sesion inactive " id="login">
+      <div class="centered-section">
+        <h2>Inicia Sesión</h2>
+
+        <form id="login-form">
+          <label for="login-usuario">Usuario</label>
+          <br>
+          <input type="text" id="login-usuario" required />
+  
+          <label for="login-password">Contraseña</label>
+          <br>
+          <input type="password" id="login-password" required />
+  
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+      </div>
+      
+    </section>
+    <script type="module" src="funciones.mjs"></script>
+  </body>
+</html>

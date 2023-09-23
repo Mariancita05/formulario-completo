@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-height: 100vh;
+    margin: 20px;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+}
+
+/* singup */
+#singUp {
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#singUp .centered-section {
+    text-align: center;
+}
+#singUp h1{
+ color: rgb(185, 184, 184);
+ font-size: 22px;
+ text-transform: uppercase;
+ margin-bottom: 15px;
+ letter-spacing: 1px;
+
+}
+
+
+label {
+    color: rgb(194, 194, 194);
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 5px;
+
+}
+label span{
+    color: rgb(255, 0, 0);
+    
+}
+
+
+button {
+    background-color: rgb(54, 54, 54);
+    color: cornsilk;
+    width: 90%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px outset gray;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+#registro-form {
+    border: 2px outset rgb(54, 54, 54);
+    background: rgb(66, 66, 66);
+    width: 400px;
+    padding: 15px 30px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
+#registro-form label {
+    margin-bottom: 15px;
+}
+
+#registro-form input {
+    width: 380px;
+    border: 2px inset rgb(139, 139, 139);
+    border-radius: 30px;    
+    height: 15px;
+}
+
+/* LOGIN */
+#login{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#login .centered-section {
+
+    text-align: center;
+}
+
+#login h2{
+ color: rgb(185, 184, 184);
+ font-size: 20px;
+ text-transform: uppercase;
+ margin-bottom: 15px;
+ letter-spacing: 1px;
+}
+
+#login-form {
+    border: 2px outset rgb(54, 54, 54);
+    background: rgb(66, 66, 66);    
+    width: 400px;
+    padding: 15px 30px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px black;
+}
+
+#login-form input {
+    width: 350px;
+    border: 2px inset rgb(139, 139, 139);
+    border-radius: 30px;    
+    height: 15px;
+}
+
+#login-form label {
+    margin-bottom: 15px;
+}
+
+.error__inactive {
+    display: none;
+}
+
+
+.check-active {
+    border: 4px solid green;
+}
+
+.check-error {
+    border: 4px solid red;
+}
+
+.error__nombre,
+.error__usuario,
+.error__password,
+.error__password2,
+.error__email,
+.error__ingreso {
+    display: none;
+    color: red;
+    padding-left: 12px;
+    gap: 10px;
+}
+
+.error-active {
+    display: flex;
+}
+
+
+.inactive{
+    visibility: hidden;
+}
